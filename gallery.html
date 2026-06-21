@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajees | Sweet Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="bg-[#F8F3E6] text-[#5C554B] font-['Inter'] antialiased overflow-x-hidden min-h-screen flex flex-col">
+
+<!-- Minimal Navigation -->
+<nav class="w-full flex justify-between items-center px-8 py-8">
+    <a href="/index.html" class="flex items-center gap-2 text-[#747A59] hover:text-[#D9A0A0] transition-colors duration-300 tracking-widest text-xs uppercase font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        Back to Home
+    </a>
+    <div class="text-2xl font-['Playfair_Display'] font-bold tracking-widest uppercase text-[#747A59]">
+        AJEES
+    </div>
+    <div class="w-24"></div> <!-- Invisible Spacer to keep the logo perfectly centered -->
+</nav>
+
+<!-- Header Section -->
+<header class="text-center pt-10 pb-16 relative">
+      <span class="absolute top-0 left-1/2 -translate-x-1/2 text-6xl md:text-7xl font-['Great_Vibes'] text-[#D9A0A0] opacity-50 w-full z-0">
+        Artistry in Baking
+      </span>
+    <h1 class="text-4xl md:text-5xl font-['Playfair_Display'] font-bold text-[#747A59] relative z-10">
+        Our Portfolio
+    </h1>
+</header>
+
+<!-- Filters Container (Empty because JS will fill it!) -->
+<div id="filter-container" class="flex flex-wrap justify-center gap-3 px-6 mb-16 relative z-10">
+    <!-- Buttons will magically appear here -->
+</div>
+
+<!-- Masonry Gallery Grid (Empty because JS will fill it!) -->
+<main id="gallery-grid" class="max-w-7xl mx-auto columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6 px-6 pb-24 flex-grow">
+    <!-- Cake cards will magically appear here -->
+</main>
+
+<!-- The Fullscreen Lightbox Modal (Hidden by default) -->
+<div id="lightbox" class="fixed inset-0 z-50 bg-[#3A4D39]/95 backdrop-blur-md hidden flex-col items-center justify-center opacity-0 transition-opacity duration-500">
+
+    <!-- Close Button -->
+    <button id="close-lightbox" class="absolute top-8 right-8 text-[#F8F3E6] hover:text-[#D9A0A0] transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+
+    <!-- Lightbox Image Container -->
+    <div class="relative w-full max-w-4xl max-h-[80vh] flex items-center justify-center px-4">
+
+        <!-- Previous Button -->
+        <button id="prev-btn" class="absolute left-4 md:-left-12 text-[#F8F3E6] hover:text-[#D9A0A0] transition-colors p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+
+        <!-- The actual clicked Image -->
+        <img id="lightbox-img" src="" alt="Gallery Image" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl border-4 border-[#F8F3E6]/20" />
+
+        <!-- Next Button -->
+        <button id="next-btn" class="absolute right-4 md:-right-12 text-[#F8F3E6] hover:text-[#D9A0A0] transition-colors p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+
+    </div>
+
+    <!-- Image Title inside Lightbox -->
+    <h3 id="lightbox-caption" class="text-[#F8F3E6] font-['Playfair_Display'] text-2xl mt-6 italic"></h3>
+
+</div>
+
+<!-- Linking our new Gallery Logic file (We will create this next!) -->
+<script type="module" src="./js/gallery.js"></script>
+</body>
+</html>
+
