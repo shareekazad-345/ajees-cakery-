@@ -9,7 +9,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: 'index.html',
-                gallery: 'gallery.html'
+                gallery: 'gallery.html',
+                contact: 'contact.html' // <--- We added the new page here!
             }
         }
     }
