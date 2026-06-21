@@ -14,16 +14,35 @@
 <body class="bg-[#F8F3E6] text-[#5C554B] font-['Inter'] antialiased overflow-x-hidden min-h-screen flex flex-col">
 
 <!-- Minimal Navigation -->
-<nav class="w-full flex justify-between items-center px-8 py-8">
-    <a href="/index.html" class="flex items-center gap-2 text-[#747A59] hover:text-[#D9A0A0] transition-colors duration-300 tracking-widest text-xs uppercase font-medium">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-        Back to Home
-    </a>
-    <div class="text-2xl font-['Playfair_Display'] font-bold tracking-widest uppercase text-[#747A59]">
+<!-- NAVIGATION -->
+<nav data-aos="fade-down" class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-8 text-[#747A59]">
+    <a href="/index.html" class="text-4xl font-['Playfair_Display'] font-bold tracking-widest uppercase hover:text-[#D9A0A0] transition-colors relative z-50">
         AJEES
+    </a>
+
+    <!-- Desktop Menu (Hidden on Mobile) -->
+    <div class="hidden md:flex gap-10 font-medium tracking-widest text-xs uppercase">
+        <a href="/index.html#home" class="hover:text-[#D9A0A0] transition-colors duration-300">Home</a>
+        <a href="/gallery.html" class="hover:text-[#D9A0A0] transition-colors duration-300">Portfolio</a>
+        <a href="/index.html#patisserie" class="hover:text-[#D9A0A0] transition-colors duration-300">Patisserie</a>
+        <a href="/contact.html" class="hover:text-[#D9A0A0] transition-colors duration-300">Contact</a>
     </div>
-    <div class="w-24"></div> <!-- Invisible Spacer to keep the logo perfectly centered -->
+
+    <!-- Mobile Hamburger Button (Hidden on Desktop) -->
+    <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 z-50 relative focus:outline-none">
+        <span class="w-6 h-0.5 bg-[#747A59] transition-all duration-300" id="bar1"></span>
+        <span class="w-6 h-0.5 bg-[#747A59] transition-all duration-300" id="bar2"></span>
+        <span class="w-6 h-0.5 bg-[#747A59] transition-all duration-300" id="bar3"></span>
+    </button>
 </nav>
+
+<!-- Mobile Full-Screen Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#F8F3E6] z-40 flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 md:hidden">
+    <a href="/index.html#home" class="text-3xl font-['Playfair_Display'] text-[#747A59] hover:text-[#D9A0A0] mobile-link">Home</a>
+    <a href="/gallery.html" class="text-3xl font-['Playfair_Display'] text-[#747A59] hover:text-[#D9A0A0] mobile-link">Portfolio</a>
+    <a href="/index.html#patisserie" class="text-3xl font-['Playfair_Display'] text-[#747A59] hover:text-[#D9A0A0] mobile-link">Patisserie</a>
+    <a href="/contact.html" class="text-3xl font-['Playfair_Display'] text-[#D9A0A0] font-bold mobile-link">Inquire Now</a>
+</div>
 
 <!-- Header Section -->
 <header class="text-center pt-10 pb-16 relative">

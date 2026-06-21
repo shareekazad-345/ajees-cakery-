@@ -13,17 +13,35 @@
 
 <body class="bg-[#F8F3E6] text-[#5C554B] font-['Inter'] antialiased overflow-x-hidden">
 
+<!-- NAVIGATION -->
 <nav data-aos="fade-down" class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-8 text-[#747A59]">
-  <div class="text-4xl font-['Playfair_Display'] font-bold tracking-widest uppercase">
+  <a href="/index.html" class="text-4xl font-['Playfair_Display'] font-bold tracking-widest uppercase hover:text-[#D9A0A0] transition-colors relative z-50">
     AJEES
-  </div>
+  </a>
+
+  <!-- Desktop Menu (Hidden on Mobile) -->
   <div class="hidden md:flex gap-10 font-medium tracking-widest text-xs uppercase">
-    <a href="#home" class="hover:text-[#D9A0A0] transition-colors duration-300">Home</a>
-    <a href="#portfolio" class="hover:text-[#D9A0A0] transition-colors duration-300">Portfolio</a>
-    <a href="#patisserie" class="hover:text-[#D9A0A0] transition-colors duration-300">Patisserie</a>
+    <a href="/index.html#home" class="hover:text-[#D9A0A0] transition-colors duration-300">Home</a>
+    <a href="/gallery.html" class="hover:text-[#D9A0A0] transition-colors duration-300">Portfolio</a>
+    <a href="/index.html#patisserie" class="hover:text-[#D9A0A0] transition-colors duration-300">Patisserie</a>
     <a href="/contact.html" class="hover:text-[#D9A0A0] transition-colors duration-300">Contact</a>
   </div>
+
+  <!-- Mobile Hamburger Button (Hidden on Desktop) -->
+  <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 z-50 relative focus:outline-none">
+    <span class="w-6 h-0.5 bg-[#747A59] transition-all duration-300" id="bar1"></span>
+    <span class="w-6 h-0.5 bg-[#747A59] transition-all duration-300" id="bar2"></span>
+    <span class="w-6 h-0.5 bg-[#747A59] transition-all duration-300" id="bar3"></span>
+  </button>
 </nav>
+
+<!-- Mobile Full-Screen Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#F8F3E6] z-40 flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 md:hidden">
+  <a href="/index.html#home" class="text-3xl font-['Playfair_Display'] text-[#747A59] hover:text-[#D9A0A0] mobile-link">Home</a>
+  <a href="/gallery.html" class="text-3xl font-['Playfair_Display'] text-[#747A59] hover:text-[#D9A0A0] mobile-link">Portfolio</a>
+  <a href="/index.html#patisserie" class="text-3xl font-['Playfair_Display'] text-[#747A59] hover:text-[#D9A0A0] mobile-link">Patisserie</a>
+  <a href="/contact.html" class="text-3xl font-['Playfair_Display'] text-[#D9A0A0] font-bold mobile-link">Inquire Now</a>
+</div>
 
 <section id="home" class="relative w-full min-h-screen flex items-center justify-center bg-[#Eef2ef] pt-20">
   <svg class="absolute top-0 right-0 w-64 h-64 text-[#A3B19B] opacity-30" viewBox="0 0 200 200" fill="currentColor"><path d="M100 0s20 40 60 40 40 60 40 60-40-20-60-20-40 20-40 20z"/></svg>
